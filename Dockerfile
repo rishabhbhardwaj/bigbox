@@ -1,4 +1,4 @@
-FROM centos:7
+FROM gradescope/auto-builds:centos
 
 ENV container docker
 
