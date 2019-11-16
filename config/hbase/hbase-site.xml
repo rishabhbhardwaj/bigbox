@@ -23,11 +23,11 @@
 <configuration>
   <property>
       <name>hbase.master</name>
-      <value>bootcamp.local:60000</value>
+      <value>localhost:60000</value>
   </property>
   <property>
       <name>hbase.rootdir</name>
-      <value>hdfs://bootcamp.local:9000/app/hbase</value>
+      <value>hdfs://localhost:9000/app/hbase</value>
   </property>
   <property>
       <name>hbase.cluster.distributed</name>
@@ -35,7 +35,7 @@
   </property>
   <property>
       <name>hbase.zookeeper.quorum</name>
-      <value>bootcamp.local</value>
+      <value>localhost</value>
   </property>
   <property>
       <name>hbase.zookeeper.property.clientPort</name>

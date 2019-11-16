@@ -85,7 +85,7 @@
     <!-- rest of the configurations: https://www.alexjf.net/blog/distributed-systems/hadoop-yarn-installation-definitive-guide/ -->
     <property>
         <name>yarn.resourcemanager.hostname</name>
-        <value>bootcamp.local</value>
+        <value>localhost</value>
     </property>
 
 </configuration>

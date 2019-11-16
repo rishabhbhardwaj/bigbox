@@ -19,7 +19,7 @@
 <configuration>
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://bootcamp.local:9000</value>
+        <value>hdfs://localhost:9000</value>
     </property>
     
     <!-- workaround for old hadoop-->
