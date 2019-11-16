@@ -84,7 +84,6 @@ COPY config/hive /etc/hive/conf/
 COPY config/spark /etc/spark/conf/
 COPY config/zookeeper /etc/zookeeper/conf/
 
-
 # 6. Execute initialization script
 RUN /scripts/init.sh
 
@@ -96,6 +95,15 @@ ENV PATH /usr/local/conda3/bin:$PATH
 RUN echo 'export PATH=/usr/local/conda3/bin:$PATH' >> /etc/profile.d/bigbox.sh
 RUN conda install --yes numpy ipython
 RUN pip install --no-cache-dir asciinema
+
+# Installing pig
+RUN wget http://apache.mirrors.hoobly.com/pig/pig-0.16.0/pig-0.16.0.tar.gz
+RUN mkdir /opt/pig
+RUN cp pig-0.16.0.tar.gz /opt/pig
+RUN cd /opt/pig && tar zxvf pig-0.16.0.tar.gz
+ENV PIG_HOME /opt/pig/pig-0.16.0
+ENV PATH $PIG_HOME/bin:$PATH
+ENV PIG_CLASSPATH $HADOOP_HOME/conf
 
 
 # N. tini
